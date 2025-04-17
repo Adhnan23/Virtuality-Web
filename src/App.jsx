@@ -5,6 +5,7 @@ import Contact from './pages/Contact'
 import Team from './pages/Team'
 import Catalog from './pages/Catalog'
 import SpecialCondition from './pages/SpecialCondition'
+import Navbar from './components/Navbar'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/special-condition" element={<SpecialCondition />} />
+        <Route path='/others' element={<Navbar />} />
       </Routes>
     </Router>
   )
