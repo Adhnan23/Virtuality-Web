@@ -1,10 +1,6 @@
-import MainLayout from "../layouts/MainLayout"
-
 function Team() {
   return (
-    <MainLayout>
-        <div>Team</div>
-    </MainLayout>
+      <div>Team</div>
   )
 }
 

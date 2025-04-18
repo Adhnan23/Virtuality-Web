@@ -1,10 +1,11 @@
-import MainLayout from "../layouts/MainLayout"
+import HeroSection from "../components/HeroSection"
 
 function Home() {
   return (
-    <MainLayout>
-      <div>Home</div>
-    </MainLayout>
+    <>
+    <HeroSection />
+
+    </>
   )
 }
 

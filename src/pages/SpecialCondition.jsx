@@ -1,11 +1,7 @@
-import MainLayout from "../layouts/MainLayout"
-
 function SpecialCondition() {
   return (
-    <MainLayout>
-        <div>SpecialCondition</div>
-    </MainLayout>
+    <div>SpecialCondition</div>
   )
 }
 
-export default SpecialCondition
+export default SpecialCondition;

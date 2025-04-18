@@ -34,8 +34,8 @@ function Navbar() {
         </button>
 
         {/* Desktop navigation - Right-aligned */}
-        <div className="hidden md:flex items-center gap-6 lg:gap-24 ml-auto">
-          <ul className="flex gap-3 lg:gap-6">
+        <div className="hidden md:flex items-center gap-6 lg:gap-56 ml-auto">
+          <ul className="flex gap-3 lg:gap-6 whitespace-nowrap overflow-hidden text-ellipsis">
             <li>
               <Link 
                 to="/about" 
