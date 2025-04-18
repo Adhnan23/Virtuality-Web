@@ -8,7 +8,7 @@ import valve from "../assets/valve.jpg";
 
 function HeroSection() {
   return (
-    <div className="w-full py-6 md:py-10">
+    <div className="w-full py-6 md:py-10 mb-10">
       {/* Mobile Layout (default) */}
       <div className="block md:hidden">
         {/* Main Hero Content */}
