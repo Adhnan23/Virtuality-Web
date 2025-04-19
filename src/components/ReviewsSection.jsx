@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import ReviewCard from "./ReviewCard";
-import reviews from "../assets/reviews";
+import { useState, useEffect } from "react"
+import ReviewCard from "./ReviewCard"
+import reviews from "../assets/reviews"
 
 function ReviewsSection() {
   const [isMobile, setIsMobile] = useState(false);
@@ -33,7 +33,7 @@ function ReviewsSection() {
   };
 
   return (
-    <div className="flex flex-col gap-6 md:gap-8 mb-10 md:mb-20 px-4 md:px-6 lg:px-8">
+    <div className="flex flex-col gap-6 md:gap-8 mb-10 md:mb-20 ">
       <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold">
         Reviews
       </h2>
