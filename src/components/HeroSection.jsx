@@ -8,11 +8,11 @@ import valve from "../assets/valve.jpg";
 
 function HeroSection() {
   return (
-    <div className="w-full py-6 md:py-10 mb-10">
+    <div className="w-full py-6 md:py-10">
       {/* Mobile Layout (default) */}
       <div className="block md:hidden">
         {/* Main Hero Content */}
-        <div className="w-full relative rounded-4xl overflow-hidden mb-4">
+        <div className="w-full relative rounded-4xl overflow-hidden mb-2">
           <div
             className="w-full h-64 bg-cover bg-center"
             style={{

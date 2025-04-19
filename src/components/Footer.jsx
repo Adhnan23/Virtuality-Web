@@ -10,7 +10,7 @@ import { TbBrandFacebook } from "react-icons/tb";
 function Footer() {
   return (
     <footer className="relative bg-[#141414] left-1/2 right-1/2 -mx-[50vw] w-screen">
-      <div className="pt-12 px-6 md:px-12">
+      <div className="pt-12 px-8 md:px-12">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
         {/* Logo and Tagline */}

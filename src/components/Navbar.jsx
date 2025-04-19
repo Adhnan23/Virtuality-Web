@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState} from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import { LuPhone } from "react-icons/lu";
 import { FaMagnifyingGlass } from "react-icons/fa6";
@@ -10,13 +10,23 @@ import logo from "../assets/logo.png";
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  // Function to determine if a link is active
+  const isActive = (path) => {
+    return currentPath === path;
+  };
+
+  // Active link class
+  const activeClass = "text-purple-400 font-semibold";
+
   return (
-    <nav className="bg-[#151718]  text-white py-6">
+    <nav className="bg-[#151718] text-white py-6">
       <div className="flex items-center justify-between">
         <Link to="/" className="z-20">
           <img className="w-24 md:w-32" src={logo} alt="brand logo" />
@@ -39,7 +49,7 @@ function Navbar() {
             <li>
               <Link 
                 to="/about" 
-                className="transition-colors duration-200 hover:text-purple-400 px-2 py-1 rounded"
+                className={`transition-colors duration-200 hover:text-purple-400 px-2 py-1 rounded ${isActive('/about') ? activeClass : ''}`}
               >
                 About Us
               </Link>
@@ -47,7 +57,7 @@ function Navbar() {
             <li>
               <Link 
                 to="/team" 
-                className="transition-colors duration-200 hover:text-purple-400 px-2 py-1 rounded"
+                className={`transition-colors duration-200 hover:text-purple-400 px-2 py-1 rounded ${isActive('/team') ? activeClass : ''}`}
               >
                 Team
               </Link>
@@ -55,7 +65,7 @@ function Navbar() {
             <li>
               <Link 
                 to="/catalog" 
-                className="transition-colors duration-200 hover:text-purple-400 px-2 py-1 rounded"
+                className={`transition-colors duration-200 hover:text-purple-400 px-2 py-1 rounded ${isActive('/catalog') ? activeClass : ''}`}
               >
                 Catalog
               </Link>
@@ -63,7 +73,7 @@ function Navbar() {
             <li>
               <Link 
                 to="/special-condition" 
-                className="transition-colors duration-200 hover:text-purple-400 px-2 py-1 rounded"
+                className={`transition-colors duration-200 hover:text-purple-400 px-2 py-1 rounded ${isActive('/special-condition') ? activeClass : ''}`}
               >
                 Special Condition
               </Link>
@@ -71,7 +81,7 @@ function Navbar() {
             <li>
               <Link 
                 to="/contact" 
-                className="transition-colors duration-200 hover:text-purple-400 px-2 py-1 rounded"
+                className={`transition-colors duration-200 hover:text-purple-400 px-2 py-1 rounded ${isActive('/contact') ? activeClass : ''}`}
               >
                 Contact Us
               </Link>
@@ -79,13 +89,19 @@ function Navbar() {
           </ul>
 
           <div className="flex items-center gap-4 lg:gap-6">
-            <Link to="/contact" className="hover:text-purple-400 transition-colors duration-200">
+            <Link 
+              to="/contact" 
+              className={`hover:text-purple-400 transition-colors duration-200 ${isActive('/contact') ? activeClass : ''}`}
+            >
               <LuPhone size={20} strokeWidth={3} />
             </Link>
             <button className="hover:text-purple-400 transition-colors duration-200">
               <FaMagnifyingGlass size={20} strokeWidth={3} />
             </button>
-            <Link to="/cart" className="flex items-center gap-1 hover:text-purple-400 transition-colors duration-200">
+            <Link 
+              to="/cart" 
+              className={`flex items-center gap-1 hover:text-purple-400 transition-colors duration-200 ${isActive('/cart') ? activeClass : ''}`}
+            >
               <BsCart3 size={22} strokeWidth={0.8} />
               <span className="bg-[#700576] text-white text-sm lg:text-base font-bold w-5 h-5 lg:w-6 lg:h-6 flex items-center justify-center rounded-full hover:bg-purple-700 transition-colors duration-200">
                 2
@@ -101,7 +117,7 @@ function Navbar() {
               <li>
                 <Link 
                   to="/about" 
-                  className="text-xl transition-colors duration-200 hover:text-purple-400"
+                  className={`text-xl transition-colors duration-200 hover:text-purple-400 ${isActive('/about') ? activeClass : ''}`}
                   onClick={toggleMobileMenu}
                 >
                   About Us
@@ -110,7 +126,7 @@ function Navbar() {
               <li>
                 <Link 
                   to="/team" 
-                  className="text-xl transition-colors duration-200 hover:text-purple-400"
+                  className={`text-xl transition-colors duration-200 hover:text-purple-400 ${isActive('/team') ? activeClass : ''}`}
                   onClick={toggleMobileMenu}
                 >
                   Team
@@ -119,7 +135,7 @@ function Navbar() {
               <li>
                 <Link 
                   to="/catalog" 
-                  className="text-xl transition-colors duration-200 hover:text-purple-400"
+                  className={`text-xl transition-colors duration-200 hover:text-purple-400 ${isActive('/catalog') ? activeClass : ''}`}
                   onClick={toggleMobileMenu}
                 >
                   Catalog
@@ -128,7 +144,7 @@ function Navbar() {
               <li>
                 <Link 
                   to="/special-condition" 
-                  className="text-xl transition-colors duration-200 hover:text-purple-400"
+                  className={`text-xl transition-colors duration-200 hover:text-purple-400 ${isActive('/special-condition') ? activeClass : ''}`}
                   onClick={toggleMobileMenu}
                 >
                   Special Condition
@@ -137,7 +153,7 @@ function Navbar() {
               <li>
                 <Link 
                   to="/contact" 
-                  className="text-xl transition-colors duration-200 hover:text-purple-400"
+                  className={`text-xl transition-colors duration-200 hover:text-purple-400 ${isActive('/contact') ? activeClass : ''}`}
                   onClick={toggleMobileMenu}
                 >
                   Contact Us
@@ -148,7 +164,7 @@ function Navbar() {
             <div className="flex items-center gap-8">
               <Link 
                 to="/contact" 
-                className="hover:text-purple-400 transition-colors duration-200"
+                className={`hover:text-purple-400 transition-colors duration-200 ${isActive('/contact') ? activeClass : ''}`}
                 onClick={toggleMobileMenu}
               >
                 <LuPhone size={24} strokeWidth={3} />
@@ -158,7 +174,7 @@ function Navbar() {
               </button>
               <Link 
                 to="/cart" 
-                className="flex items-center gap-1 hover:text-purple-400 transition-colors duration-200"
+                className={`flex items-center gap-1 hover:text-purple-400 transition-colors duration-200 ${isActive('/cart') ? activeClass : ''}`}
                 onClick={toggleMobileMenu}
               >
                 <BsCart3 size={26} strokeWidth={0.8} />
