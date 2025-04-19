@@ -5,7 +5,7 @@ import htcvive from "../assets/htcvive.png"
 function ProductsSection() {
   return (
     <div
-      className='w-full py-8 h-auto'
+      className='w-full py-8 h-auto mb-20'
       style={{
         background: "radial-gradient(circle at center top, #202343, transparent 20%)",
       }}
