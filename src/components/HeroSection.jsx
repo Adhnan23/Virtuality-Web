@@ -34,7 +34,7 @@ function HeroSection() {
                 IMMERSE YOURSELF INTO THE
                 <br /> WORLD OF VIRTUAL REALITY
               </h1>
-              <p className="text-white text-sm sm:text-base mb-6 max-w-xl">
+              <p className="text-[#979797] text-sm sm:text-base mb-6 max-w-xl">
                 Try new emotions and impressions <br /> right at home
               </p>
               <GradientButton text="Catalog" to="/catalog" />
@@ -75,7 +75,7 @@ function HeroSection() {
                 IMMERSE YOURSELF INTO THE
                 <br /> WORLD OF VIRTUAL REALITY
               </h1>
-              <p className="text-white text-lg mb-6 max-w-xl">
+              <p className="text-[#979797] text-lg mb-6 max-w-xl">
                 Try new emotions and impressions <br /> right at home
               </p>
               <GradientButton text="Catalog" to="/catalog" />

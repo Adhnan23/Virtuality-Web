@@ -6,7 +6,7 @@ import vrRoom from "../assets/vr-room.jpg";
 function FeatureSection() {
   return (
     <div 
-      className="w-full py-6 md:py-10 mb-10 relative"
+      className="w-full py-6 md:py-10 relative"
       style={{
         background: "radial-gradient(circle at center bottom, #4a1d5f, transparent 40%)",
       }}
@@ -33,11 +33,11 @@ function FeatureSection() {
             />
             <div className="absolute inset-0 bg-black/50"></div>
             <div className="relative h-full flex flex-col justify-center p-6">
-              <h1 className="text-lg sm:text-3xl font-bold text-white mb-4">
+              <h2 className="text-lg sm:text-3xl font-bold text-white mb-4">
                 WE WORK AROUND
                 <br /> THE CLOCK
-              </h1>
-              <p className="text-white text-sm sm:text-base mb-6 max-w-xl">
+              </h2>
+              <p className="text-[#979797] text-sm sm:text-base mb-6 max-w-xl">
                 Our online store operates 24/7 <br />Every client important to us, so we do everything to make <br />you satisfied
               </p>
               <GradientButton text="View Products" to="/catalog" />
@@ -84,11 +84,11 @@ function FeatureSection() {
             />
             <div className="absolute inset-0 bg-black/50"></div>
             <div className="relative z-10 flex flex-col h-full p-12">
-              <h1 className="text-2xl lg:text-4xl md:text-3xl font-bold text-white mb-8">
+              <h2 className="text-2xl lg:text-4xl md:text-3xl font-bold text-white mb-8">
               WE WORK AROUND
               <br /> THE CLOCK
-              </h1>
-              <p className="text-white text-md lg:text-lg max-w-xl mb-40">
+              </h2>
+              <p className="text-[#979797] text-md lg:text-lg max-w-xl mb-40">
                 Our online store operates 24/7 <br />Every client important to us, so we do everything to make <br />you satisfied
               </p>
               <GradientButton text="View Products" to="/catalog" />
