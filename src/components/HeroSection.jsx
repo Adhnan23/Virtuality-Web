@@ -10,7 +10,7 @@ function HeroSection() {
   return (
     <div className="w-full py-6 md:py-10">
       {/* Mobile Layout (default) */}
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         {/* Main Hero Content */}
         <div className="w-full relative rounded-4xl overflow-hidden mb-2">
           <div
@@ -43,7 +43,7 @@ function HeroSection() {
         </div>
 
         {/* Small Cards - Horizontal Row on Mobile */}
-        <div className="grid grid-cols-3 gap-2 h-24">
+        <div className="grid grid-cols-3 gap-2 h-24 md:h-42">
           <HeroCard imgSrc={appleVision} text="APPLE VISION PRO" />
           <HeroCard imgSrc={htc} text="HTC VIVE FOCUS 3" />
           <HeroCard imgSrc={valve} text="VALVE INDEX VR KIT" />
@@ -51,7 +51,7 @@ function HeroSection() {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden md:grid md:grid-cols-10 md:gap-4 md:h-[70vh]">
+      <div className="hidden lg:grid md:grid-cols-10 md:gap-4 md:h-[70vh]">
         {/* Main Hero Content (div1) */}
         <div className="col-span-8 relative rounded-4xl overflow-hidden">
           <div

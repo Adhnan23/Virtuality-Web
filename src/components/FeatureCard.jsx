@@ -3,9 +3,9 @@ function FeatureCard({title, text}) {
       <div className="relative rounded-2xl md:rounded-4xl overflow-hidden h-full bg-[#151718] border-1 border-[#474646]">
       {/* Image container without forced aspect ratio */}
       <div className="w-full h-full flex flex-col justify-center items-center gap-2">
-        <h4 className="text-white text-4xl font-bold text-center lg:text-6xl lg:font-extrabold">{title}</h4>
+        <h4 className="text-white text-3xl font-bold text-center lg:text-5xl lg:font-extrabold">{title}</h4>
         {/* Overlay text with gradient */}
-          <h3 className="text-[#787878] text-sm text-center md:text-lg">{text}</h3>
+          <h3 className="text-[#787878] text-xs text-center md:text-lg">{text}</h3>
       </div>
     </div>
     )

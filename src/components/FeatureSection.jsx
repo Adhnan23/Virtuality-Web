@@ -8,16 +8,16 @@ function FeatureSection() {
     <div 
       className="w-full py-6 md:py-10 relative"
       style={{
-        background: "radial-gradient(circle at center bottom, #4a1d5f, transparent 40%)",
+        background: "radial-gradient(circle at center bottom, #4a1d5f, transparent 30%)",
       }}
     >
-      <h2 className="text-white text-4xl mb-10">Online Store of The Future</h2>
+      <h2 className="text-white text-2xl md:text-4xl mb-10">Online Store of The Future</h2>
       {/* Mobile Layout (default) */}
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         {/* Main Feature Content */}
         <div className="w-full relative rounded-4xl overflow-hidden mb-4">
           <div
-            className="w-full h-64 bg-cover bg-center"
+            className="w-full h-64 md:h-82 bg-cover bg-center"
             style={{
               backgroundImage: "url('" + vrRoom + "')",
               backgroundSize: "130%",
@@ -46,7 +46,7 @@ function FeatureSection() {
         </div>
 
         {/* Small Cards - Horizontal Row on Mobile */}
-        <div className="grid grid-cols-2 gap-2 h-64">
+        <div className="grid grid-cols-2 gap-2 h-64 md:h-80">
           <FeatureCard title="30" text="Employees" />
           <FeatureCard title="1 000+" text="Satisfied Clients" />
           <FeatureCard title="5 Years" text="In the electronics market" />
@@ -55,7 +55,7 @@ function FeatureSection() {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden md:grid md:grid-cols-2 md:gap-4 md:h-[60vh]">
+      <div className="hidden lg:grid lg:grid-cols-2 md:gap-4 md:h-[60vh]">
         {/* Sidebar cards - Now in a 2x2 grid on the LEFT */}
         <div className="grid grid-cols-2 grid-rows-2 gap-4">
           <FeatureCard title="30" text="Employees" />
